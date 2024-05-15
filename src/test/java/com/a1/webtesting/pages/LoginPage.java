@@ -9,9 +9,22 @@ public class LoginPage {
     By usernameField = By.id("user-name");
     By passwordField = By.id("password");
     By loginButton = By.id("login-button");
+    By errorMessage = By.cssSelector("[data-test='error']");
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
+    }
+
+    public boolean isOnLoginPage(){
+        try {
+            driver.findElement(usernameField);
+            driver.findElement(passwordField);
+            driver.findElement(loginButton);
+
+            return true;
+        } catch (org.openqa.selenium.NoSuchElementException e) {
+            return false;
+        }
     }
 
     public void enterUsername(String username) {
@@ -28,5 +41,9 @@ public class LoginPage {
 
     public String getCurrentUrl() {
         return driver.getCurrentUrl();
+    }
+
+    public String getErrorMessage() {
+        return driver.findElement(errorMessage).getText();
     }
 }
