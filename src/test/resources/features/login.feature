@@ -1,3 +1,4 @@
+@Login
 Feature: Login
 
   Scenario: Login menggunakan username dan password yang terdaftar pada sistem

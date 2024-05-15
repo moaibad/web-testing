@@ -14,6 +14,12 @@
     </properties>
 
     <dependencies>
+        <!-- Lombok Dependencies -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
+        </dependency>
         <!-- Cucumber Dependencies -->
         <dependency>
             <groupId>io.cucumber</groupId>
@@ -40,6 +46,13 @@
             <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
+        <!-- ExtentReports Dependencies -->
+        <dependency>
+            <groupId>tech.grasshopper</groupId>
+            <artifactId>extentreports-cucumber7-adapter</artifactId>
+            <version>1.13.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>
