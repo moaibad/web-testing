@@ -2,64 +2,68 @@
 Feature: Login
 
   Scenario: Login menggunakan username dan password yang terdaftar pada sistem
-    Given pengguna membuka halaman saucedemo pada browser
-    And pengguna berada pada halaman login yang berisikan form username dan password
-    When pengguna mengisi username "standard_user" dan password "secret_sauce"
-    And pengguna menekan tombol login
-    Then pengguna berhasil melakukan login dan menampilkan halaman Dashboard
+    Given Pengguna membuka halaman saucedemo pada browser
+    And Pengguna berada pada halaman login yang berisikan form username dan password
+    When Pengguna mengisi username "standard_user"
+    And Pengguna mengisi password "secret_sauce"
+    And Pengguna menekan tombol login
+    Then Pengguna berhasil melakukan login dan menampilkan halaman Dashboard
 
 
   Scenario: Login menggunakan username yang terdaftar pada sistem dan password yang tidak terdaftar pada sistem
-    Given pengguna membuka halaman saucedemo pada browser
-    And pengguna berada pada halaman login yang berisikan form username dan password
-    When pengguna mengisi username "standard_user" dan password "cinderella"
-    And pengguna menekan tombol login
-    Then pengguna gagal melakukan login dan terdapat error message "Username and password do not match any user in this service"
+    Given Pengguna membuka halaman saucedemo pada browser
+    And Pengguna berada pada halaman login yang berisikan form username dan password
+    When Pengguna mengisi username "standard_user"
+    And Pengguna mengisi password "cinderella"
+    And Pengguna menekan tombol login
+    Then Pengguna gagal melakukan login dan terdapat error message "Username and password do not match any user in this service"
 
   Scenario: Login menggunakan password yang terdaftar pada sistem dan username yang tidak terdaftar pada sistem
-    Given pengguna membuka halaman saucedemo pada browser
-    And pengguna berada pada halaman login yang berisikan form username dan password
-    When pengguna mengisi username "cinderella" dan password "secret_sauce"
-    And pengguna menekan tombol login
-    Then pengguna gagal melakukan login dan terdapat error message "Username and password do not match any user in this service"
+    Given Pengguna membuka halaman saucedemo pada browser
+    And Pengguna berada pada halaman login yang berisikan form username dan password
+    When Pengguna mengisi username "cinderella"
+    And Pengguna mengisi password "secret_sauce"
+    And Pengguna menekan tombol login
+    Then Pengguna gagal melakukan login dan terdapat error message "Username and password do not match any user in this service"
 
   Scenario: Login menggunakan username dan password yang tidak terdaftar pada sistem
-    Given pengguna membuka halaman saucedemo pada browser
-    And pengguna berada pada halaman login yang berisikan form username dan password
-    When pengguna mengisi username "cinderella" dan password "boo"
-    And pengguna menekan tombol login
-    Then pengguna gagal melakukan login dan terdapat error message "Username and password do not match any user in this service"
+    Given Pengguna membuka halaman saucedemo pada browser
+    And Pengguna berada pada halaman login yang berisikan form username dan password
+    When Pengguna mengisi username "cinderella"
+    And Pengguna mengisi password "boo"
+    And Pengguna menekan tombol login
+    Then Pengguna gagal melakukan login dan terdapat error message "Username and password do not match any user in this service"
 
   Scenario: Login menggunakan username yang terdaftar pada sistem dan password kosong
-    Given pengguna membuka halaman saucedemo pada browser
-    And pengguna berada pada halaman login yang berisikan form username dan password
-    When pengguna mengisi username "standard_user" dan password ""
-    And pengguna menekan tombol login
-    Then pengguna gagal melakukan login dan terdapat error message "Password is required"
+    Given Pengguna membuka halaman saucedemo pada browser
+    And Pengguna berada pada halaman login yang berisikan form username dan password
+    When Pengguna mengisi username "standard_user"
+    And Pengguna menekan tombol login
+    Then Pengguna gagal melakukan login dan terdapat error message "Password is required"
 
   Scenario: Login menggunakan username yang tidak terdaftar pada sistem dan password kosong
-    Given pengguna membuka halaman saucedemo pada browser
-    And pengguna berada pada halaman login yang berisikan form username dan password
-    When pengguna mengisi username "cinderella" dan password ""
-    And pengguna menekan tombol login
-    Then pengguna gagal melakukan login dan terdapat error message "Password is required"
+    Given Pengguna membuka halaman saucedemo pada browser
+    And Pengguna berada pada halaman login yang berisikan form username dan password
+    When Pengguna mengisi username "cinderella"
+    And Pengguna menekan tombol login
+    Then Pengguna gagal melakukan login dan terdapat error message "Password is required"
 
   Scenario: Login menggunakan password yang terdaftar pada sistem dan username kosong
-    Given pengguna membuka halaman saucedemo pada browser
-    And pengguna berada pada halaman login yang berisikan form username dan password
-    When pengguna mengisi username "" dan password "secret_sauce"
-    And pengguna menekan tombol login
-    Then pengguna gagal melakukan login dan terdapat error message "Username is required"
+    Given Pengguna membuka halaman saucedemo pada browser
+    And Pengguna berada pada halaman login yang berisikan form username dan password
+    When Pengguna mengisi password "secret_sauce"
+    And Pengguna menekan tombol login
+    Then Pengguna gagal melakukan login dan terdapat error message "Username is required"
 
   Scenario: Login menggunakan password yang tidak terdaftar pada sistem dan username kosong
-    Given pengguna membuka halaman saucedemo pada browser
-    And pengguna berada pada halaman login yang berisikan form username dan password
-    When pengguna mengisi username "" dan password "boo"
-    And pengguna menekan tombol login
-    Then pengguna gagal melakukan login dan terdapat error message "Username is required"
+    Given Pengguna membuka halaman saucedemo pada browser
+    And Pengguna berada pada halaman login yang berisikan form username dan password
+    When Pengguna mengisi password "boo"
+    And Pengguna menekan tombol login
+    Then Pengguna gagal melakukan login dan terdapat error message "Username is required"
 
   Scenario: Login dengan username dan password kosong
-    Given pengguna membuka halaman saucedemo pada browser
-    And pengguna berada pada halaman login yang berisikan form username dan password
-    When pengguna menekan tombol login
-    Then pengguna gagal melakukan login dan terdapat error message "Username and Password is required"
+    Given Pengguna membuka halaman saucedemo pada browser
+    And Pengguna berada pada halaman login yang berisikan form username dan password
+    When Pengguna menekan tombol login
+    Then Pengguna gagal melakukan login dan terdapat error message "Username and Password is required"
