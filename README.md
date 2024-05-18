@@ -9,7 +9,11 @@ Repository ini bertujuan untuk melakukan pengujian terhadap website Swag Labs ht
 
 **Builder Tools:** Apache Maven
 
-**Testing Tools:** JUnit4
+**Testing Tools:** JUnit4, Cucumber, & Selenium
+
+**Web Driver:** ChromeDriver
+
+**Report Generator Tools:** ExtentReport
 
 [//]: # (**Test Report Generator:** ExtentReports)
 ## Menjalankan Pengujian
